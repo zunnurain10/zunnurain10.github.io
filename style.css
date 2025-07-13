@@ -85,6 +85,7 @@ section {
         opacity: 0.5;
         text-shadow: 0 0 10px #64ffda;
     }
+
     100% {
         opacity: 5;
         text-shadow: 0 0 20px #64ffda;
@@ -117,7 +118,8 @@ section {
 }
 
 
-.skills-left, .f-plans {
+.skills-left,
+.f-plans {
     background-color: #112240;
     padding: 2rem;
     border-radius: 12px;
@@ -126,7 +128,8 @@ section {
     min-width: 280px;
 }
 
-.skills-left h2, .f-plans h2 {
+.skills-left h2,
+.f-plans h2 {
     color: #64ffda;
     margin-bottom: 2rem;
     font-size: 1.8rem;
@@ -134,12 +137,14 @@ section {
     padding-bottom: 0.5rem;
 }
 
-.skills-left ul, .f-plans ul {
+.skills-left ul,
+.f-plans ul {
     list-style: none;
     padding-left: 0;
 }
 
-.skills-left li, .f-plans li {
+.skills-left li,
+.f-plans li {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     color: #ffffff;
@@ -147,7 +152,8 @@ section {
     padding-left: 1.2rem;
 }
 
-.skills-left li::before, .f-plans li::before {
+.skills-left li::before,
+.f-plans li::before {
     content: "✔";
     position: absolute;
     left: 0;
@@ -179,82 +185,62 @@ section {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-    nav .right ul {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
 
-    .intro-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .intro-text, .intro-image {
-        flex: none;
-    }
-
-    .intro-image img {
-        width: 180px;
-    }
-
-    .skills-section {
+    /* Navbar stack on small screens */
+    nav {
         flex-direction: column;
         align-items: center;
     }
 
-    .skills-left, .f-plans {
+    nav .right ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        padding-left: 0;
+    }
+
+    /* Intro Section stacking */
+    .intro-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .intro-text,
+    .intro-image {
+        flex: none;
+        width: 100%;
+    }
+
+    .intro-image img {
+        width: 180px;
+        margin-top: 1rem;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Skills Section stacking */
+    .skills-section {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .skills-left,
+    .f-plans {
         width: 100%;
         max-width: 400px;
+        margin: 0 auto;
     }
-}
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  nav .right ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-    padding-left: 0;
-  }
+    /* About Section */
+    #about {
+        padding: 1rem;
+    }
 
-  .intro-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-
-  .intro-text, .intro-image {
-    flex: none;
-    width: 100%;
-  }
-
-  .intro-image img {
-    width: 180px;
-    margin-top: 1rem;
-  }
-
-  .skills-section {
-    flex-direction: column;
-    padding: 2rem 1rem;
-    gap: 2rem;
-  }
-
-  .skills-left, .f-plans {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  #about {
-    padding: 1rem;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+    /* Make all images responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
