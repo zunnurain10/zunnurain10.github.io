@@ -207,3 +207,54 @@ section {
         max-width: 400px;
     }
 }
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav .right ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    padding-left: 0;
+  }
+
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .intro-text, .intro-image {
+    flex: none;
+    width: 100%;
+  }
+
+  .intro-image img {
+    width: 180px;
+    margin-top: 1rem;
+  }
+
+  .skills-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .skills-left, .f-plans {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  #about {
+    padding: 1rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
